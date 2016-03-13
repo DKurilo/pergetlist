@@ -16,7 +16,7 @@ DATABASES = {
         "HOST": '127.0.0.1',
         "NAME": 'django',
         "USER": 'django',
-        "PASSWORD": 'eGtZ8ik32zo9TakLV7fQ',
+        "PASSWORD": 'eGtZ8ik32zo9TakLV7fQ', #Ups! I forgot to remove my password. Now I need to change it! You should not do as I did!
     }
 }
 ```
