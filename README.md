@@ -2,7 +2,7 @@
 Gives last broadcasts from list of users.
 
 Database settings are in pertest/settings_dev.py
-It look like:
+It looks like:
 ```python
 import os
 
@@ -20,3 +20,5 @@ DATABASES = {
     }
 }
 ```
+
+*P.S. It's my first Django project.*
