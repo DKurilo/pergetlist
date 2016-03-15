@@ -20,10 +20,13 @@ def index(request):
         source.broadcast_end = now;
       source.lastpoll = now
       source.save();
+    broadcast_end = 'Live!';
+    if source.broadcast_end != None:
+      broadcast_end = source.broadcast_end.strftime('%d/%m/%Y %H:%M:%S');
     viewSourcesList.append({
       'username': source.username, 
       'broadcast': source.broadcast, 
-      'broadcast_end': source.broadcast_end.strftime('%d/%m/%Y %H:%M:%S'), 
+      'broadcast_end': broadcast_end, 
       'lastpoll': source.lastpoll.strftime('%d/%m/%Y %H:%M:%S'),
     })
   

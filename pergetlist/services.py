@@ -29,7 +29,10 @@ def loadBrodcasts(user):
   if 'id' in broadcastData['broadcast']:
     broadcast['id'] = broadcastData['broadcast']['id']
     
-    iso_ts = re.sub(r'(.*)\.\d{9}(.*):(.+)', '\g<1>\g<2>\g<3>', broadcastData['broadcast']['end']);
-    broadcast['end'] = datetime.strptime(iso_ts, '%Y-%m-%dT%H:%M:%S%z')
+    if 'end' in broadcastData['broadcast']:
+      iso_ts = re.sub(r'(.*)\.\d{9}(.*):(.+)', '\g<1>\g<2>\g<3>', broadcastData['broadcast']['end']);
+      broadcast['end'] = datetime.strptime(iso_ts, '%Y-%m-%dT%H:%M:%S%z')
+    else:
+      broadcast['end'] = None;
 
   return broadcast;
